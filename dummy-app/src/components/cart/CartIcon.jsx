@@ -28,24 +28,42 @@ const DUMMY_DATA = [
 ];
 
 const CartIconContainer = styled.div(props => ({
-  position: "relative"
+  position: "relative",
 }));
+
+const PopoverHeader = styled.div(props => ({
+  borderBottom: "1px solid #C8AF6A",
+  fontSize: "14px",
+  marginBottom: "10px",
+  padding: "5px 0 15px",
+  textAlign: "center"
+}));
+
 
 const CartIcon = () => {
   // this is a React hook. If you don't know about hooks yet, don't worry about
   // this.
-  const [isActive, setIsActive] = useState(false);
+
+  const [isActive, setIsActive] = useState(true);
+
+
+  const pointer={
+    cursor: "pointer",
+  }
 
   return (
     <CartIconContainer>
-      <div onClick={() => setIsActive(!isActive)}>
+      <div style={pointer} onClick={() => setIsActive(!isActive)}>
         <IconCart />
         <BadgeRound>2</BadgeRound>
       </div>
       <Popover isVisible={isActive} onClose={() => setIsActive(false)}>
-        Remove this text
-        {/* 
-            Tip: .map() over the DUMMY_DATA here and mount <CartItem data={item} /> components 
+        <PopoverHeader>
+          {DUMMY_DATA.length} items in your cart
+        </PopoverHeader>
+        <CartItem data={DUMMY_DATA} />
+        {/*
+            Tip: .map() over the DUMMY_DATA here and mount <CartItem data={item} /> components
           */}
       </Popover>
     </CartIconContainer>

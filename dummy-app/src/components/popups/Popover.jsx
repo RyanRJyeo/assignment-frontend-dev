@@ -11,8 +11,14 @@ const PopoverContainer = styled.div(props => ({
 }));
 
 const ContentContainer = styled.div(props => ({
-  position: "relative",
+  backgroundColor: "White",
   border: "1px solid black",
+  borderRadius: "5px",
+  padding: "10px",
+  position: "absolute",
+  top: -10,
+  right: 20,
+  width: 200,
   zIndex: 2
 }));
 
