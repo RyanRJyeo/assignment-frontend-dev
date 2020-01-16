@@ -17,7 +17,7 @@ const ContentContainer = styled.div(props => ({
   padding: "10px",
   position: "absolute",
   top: -10,
-  right: 20,
+  right: 3,
   width: 200,
   zIndex: 2
 }));

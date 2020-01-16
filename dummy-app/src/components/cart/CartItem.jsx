@@ -7,13 +7,13 @@ const EachItem = styled.div(props => ({
   padding: "15px 0 20px",
   display: "flex",
   justifyContent: "space-between",
+  cursor: "pointer",
 }));
 
 const ItemDetails = styled.div(props => ({
   fontSize: "13px",
   width: "67%",
   height: "60px",
-  cursor: "pointer",
 }));
 
 const Total = styled.div(props => ({

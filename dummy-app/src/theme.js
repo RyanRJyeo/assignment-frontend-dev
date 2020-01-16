@@ -10,7 +10,7 @@ export const theme = {
   width: {
     fiftypercent: "50%",
     sixtypercent: "60%",
-    thirtypix: "15px"
+    thirteenpix: "13px"
   },
   font: {
     tenpix: "10px"

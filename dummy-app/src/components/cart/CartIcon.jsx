@@ -39,6 +39,14 @@ const PopoverHeader = styled.div(props => ({
   textAlign: "center"
 }));
 
+const CartDiv = styled.div`
+  fill: #C8AF6A;
+  cursor: pointer;
+  &:hover {
+    fill: #D3BE86;
+  }
+`
+
 
 const CartIcon = () => {
   // this is a React hook. If you don't know about hooks yet, don't worry about
@@ -46,15 +54,12 @@ const CartIcon = () => {
 
   const [isActive, setIsActive] = useState(true);
 
-
-  const pointer={
-    cursor: "pointer",
-  }
-
   return (
     <CartIconContainer>
-      <div style={pointer} onClick={() => setIsActive(!isActive)}>
-        <IconCart />
+      <div onClick={() => setIsActive(!isActive)}>
+        <CartDiv>
+          <IconCart />
+        </CartDiv>
         <BadgeRound>2</BadgeRound>
       </div>
       <Popover isVisible={isActive} onClose={() => setIsActive(false)}>
