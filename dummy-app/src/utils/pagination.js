@@ -6,8 +6,7 @@ export function paginator(currentPage, totalPages) {
 
   // Test 1
   if(totalPages < 6){
-    pages[0] = currentPage;
-    for(let i=1; i < totalPages; i++){
+    for(let i=0; i < totalPages; i++){
       pages[i] = i+1;
     };
   } else {
